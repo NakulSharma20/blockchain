@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ballgame_backend": {
+      "main": "src/ballgame_backend/main.mo",
+      "type": "motoko"
+    },
+    "ballgame_frontend": {
+      "dependencies": [
+        "ballgame_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ballgame_frontend/src/index.html"
+      },
+      "source": [
+        "src/ballgame_frontend/assets",
+        "dist/ballgame_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
